@@ -906,6 +906,7 @@ docs = [
     { name = "django-allauth" },
     { name = "django-filter" },
     { name = "django-mantle" },
+    { name = "django-modern-schemas" },
     { name = "docutils" },
     { name = "myst-parser" },
     { name = "nanodjango" },
@@ -1011,7 +1012,7 @@ dev = [
     { name = "ty", specifier = "==0.0.75" },
     { name = "types-django-filter", specifier = ">=25.2,<27" },
     { name = "types-docker", specifier = ">=7.2,<8" },
-    { name = "types-docutils", specifier = ">=0.22,<0.23" },
+    { name = "types-docutils", specifier = ">=0.22,<0.24" },
     { name = "types-pyyaml", specifier = ">=6,<7" },
     { name = "types-redis", specifier = ">=4.6,<5" },
     { name = "types-setuptools", specifier = ">=82,<85" },
@@ -1027,6 +1028,7 @@ docs = [
     { name = "django-allauth", specifier = ">=65.4,<66" },
     { name = "django-filter", specifier = ">=25.2,<27" },
     { name = "django-mantle", specifier = ">=26.6,<27" },
+    { name = "django-modern-schemas", specifier = ">=0.1.1,<0.2" },
     { name = "docutils", specifier = ">=0.22,<0.23" },
     { name = "myst-parser", specifier = ">=5,<6" },
     { name = "nanodjango", specifier = ">=0.16,<0.17" },
@@ -1070,6 +1072,20 @@ unit-test = [
     { name = "pytest-xdist", specifier = ">=3.8,<4" },
     { name = "syrupy", specifier = ">=5.1,<7" },
     { name = "xmltodict-rs", specifier = ">=0.13,<0.14" },
+]
+
+[[package]]
+name = "django-modern-schemas"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "pydantic", extra = ["email"] },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b1/64/fa3a29e51b8f4333c4790c658ae9121a54007b2611949e12efb912b3cef0/django_modern_schemas-0.1.1.tar.gz", hash = "sha256:f1ef41e7415422447c621224fa37675465d9966cbd476a43c19f31c73e61bdc2", size = 18642, upload-time = "2026-08-26T05:10:53.736Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0a/23/55afa978424aad13ab17ccb8db280f6bf1706d2aea168c61b01865ceee58/django_modern_schemas-0.1.1-py3-none-any.whl", hash = "sha256:3701447642f596c679457739b0ec36882c5cbda178f800e89de045c88ccc2a5f", size = 25295, upload-time = "2026-08-26T05:10:52.738Z" },
 ]
 
 [[package]]
@@ -3518,15 +3534,15 @@ wheels = [
 
 [[package]]
 name = "sse-starlette"
-version = "3.4.8"
+version = "3.4.10"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
     { name = "starlette" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f8/00/b42a44342a054d58cb1115d7c8aa9cb4290dd9442f9c1b91a4b8173dba22/sse_starlette-3.4.8.tar.gz", hash = "sha256:ed89ffbb75cbf78a5fe2f2109cd584792ee7f9dfac96f791db546df8f15f3f9c", size = 32548, upload-time = "2026-08-05T11:19:49.982Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/e1/8a41e88e825ea26c44333897c7ffe35fe60153a2cfc097a5bd1d209ad281/sse_starlette-3.4.10.tar.gz", hash = "sha256:c6c87280d8feb4e55a8d79633782766b9cac6a26da5c79a145d00aa404117a86", size = 33720, upload-time = "2026-09-03T09:36:24.08Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/dd/3a/764912c58293d95b6dcdf4cc255f9d10de310580ced547b082eb9d72018c/sse_starlette-3.4.8-py3-none-any.whl", hash = "sha256:6e82314c786709a3cd9520f2285cf9fff90e181e598e8a357b0cf80f66afba0d", size = 16516, upload-time = "2026-08-05T11:19:48.748Z" },
+    { url = "https://files.pythonhosted.org/packages/ae/3c/96018a51c7301a64f7b0579d9ce8f9b69dd39ca8ed5aa100ba3feadee503/sse_starlette-3.4.10-py3-none-any.whl", hash = "sha256:710f5f5b0527409903a22a91699db02f76f4c2eb9204e882e4ee7cada76bdf75", size = 17120, upload-time = "2026-09-03T09:36:22.56Z" },
 ]
 
 [[package]]
@@ -3766,11 +3782,11 @@ wheels = [
 
 [[package]]
 name = "types-docutils"
-version = "0.22.3.20260724"
+version = "0.23.0.20260827"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/e5/8f/30e02b59a9aad81eacd3d02fab5365257e89fde56e7acf44a4128f5f80aa/types_docutils-0.22.3.20260724.tar.gz", hash = "sha256:0223ce87f9b8331a5a3a7c7832e828033d289da6b878a0dcfbc74c30ec58850e", size = 57883, upload-time = "2026-07-24T04:58:36.388Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3c/f8/55b739a017fe34c1790a1e8cf1a63c8cf50d7e64777e9b2f12032a73515d/types_docutils-0.23.0.20260827.tar.gz", hash = "sha256:757ca7313a337f83b761d917fe71e60d723376898338105aa78505b5214f4c5c", size = 58209, upload-time = "2026-08-27T12:06:52.325Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/13/1a/898fbb98680dbd5eb7ac8e9cbaf39cf234d329a45d89d04faaf33d7d8008/types_docutils-0.22.3.20260724-py3-none-any.whl", hash = "sha256:45e2fe584608671aa648784c4f805d08a36cd69eb2bd542e60522140c46dc89c", size = 91986, upload-time = "2026-07-24T04:58:35.368Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/ab/6939f1ce2b1e02e2f19e7ce85728570a27740224031fb13a9dd044731943/types_docutils-0.23.0.20260827-py3-none-any.whl", hash = "sha256:4db1342b6defed4de29cb2d65ab295e3ecc13808f2718ee2980ed18cfafef730", size = 92112, upload-time = "2026-08-27T12:06:51.31Z" },
 ]
 
 [[package]]

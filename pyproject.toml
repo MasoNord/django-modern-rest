@@ -99,7 +99,7 @@ dev = [
   "ty==0.0.75",
   "types-django-filter>=25.2,<27",
   "types-docker>=7.2,<8",
-  "types-docutils>=0.22,<0.23",
+  "types-docutils>=0.22,<0.24",
   "types-pyyaml>=6,<7",
   "types-redis>=4.6,<5",
   "types-setuptools>=82,<85",
@@ -111,6 +111,7 @@ dev = [
 docs = [
   "django-filter>=25.2,<27",
   "django-mantle>=26.6,<27",
+  "django-modern-schemas>=0.1.1,<0.2",
   "docutils>=0.22,<0.23",
   "myst-parser>=5,<6",
   "shibuya>=2026.1,<2027",
