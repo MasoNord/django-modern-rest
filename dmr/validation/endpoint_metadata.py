@@ -274,20 +274,20 @@ class _ResponseListValidator:  # noqa: WPS214
         self,
         responses: list[ResponseSpec],
     ) -> None:
-        header_names = []
+        cookie_names = []
 
         modification = self.metadata.modification
 
         if modification and modification.cookies:
-            header_names = list(modification.cookies.keys())
+            cookie_names = list(modification.cookies.keys())
 
         for response in responses:
             if not response.cookies:
                 continue
 
-            header_names += list(response.cookies.keys())
+            cookie_names += list(response.cookies.keys())
 
-        invalid_cookie = self._check_invalid_tokens(header_names)
+        invalid_cookie = self._check_invalid_tokens(cookie_names)
         if invalid_cookie:
             raise EndpointMetadataError(
                 f'Cookie name {invalid_cookie!r} is not following http spec.',
